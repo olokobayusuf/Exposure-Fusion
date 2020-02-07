@@ -1,4 +1,4 @@
-# exposure-fusion
+# Exposure Fusion
 
 Implementation of Exposure Fusion in Matlab, as described in:
 
