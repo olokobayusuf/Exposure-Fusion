@@ -77,6 +77,12 @@ end
 W = W + 1e-12; %avoids division by zero
 W = W./repmat(sum(W,3),[1 1 N]);
 
+% Write out weight maps
+for i = 1:N
+    weight_map = W(:,:,i);
+    imwrite(weight_map, sprintf("weight_%i.jpg", i));
+end
+
 % create empty pyramid
 pyr = gaussian_pyramid(zeros(r,c,3));
 nlev = length(pyr);
